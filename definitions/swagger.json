@@ -1,240 +1,276 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "Blog",
-    "description": "This is a blog api",
+    "title": "Audio",
+    "description": "This is a audio api",
     "termsOfService": "http://stack.network/terms-of-service.html",
     "version": "v1"
   },
-  "host": "blog.api.kinlane.com",
+  "host": "audio.kinlane.com.us-east.audioapi.api",
   "basePath": "/",
   "schemes": [
     "http"
   ],
   "produces": [
-    "bloglication/json"
+    "application/json"
   ],
   "paths": {
-    "/blog/": {
+    "/": {
       "get": {
-        "summary": "retrieves all blogs",
-        "description": "pulls all blogs, with filter by keyword",
-        "operationId": "getBlogs",
+        "summary": "retrieves all audio",
+        "description": "pulls all audio, with filter by keyword",
+        "operationId": "getAudio",
         "parameters": [
           {
             "name": "query",
             "in": "query",
-            "description": "a text query to search across blog",
+            "description": "a text query to search across audio",
             "required": true,
             "type": "string"
           }
         ],
         "responses": {
           "200": {
-            "description": "blog response",
+            "description": "audio response",
             "schema": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/blog"
+                "$ref": "#/definitions/audio"
               }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "schema": {
+              "$ref": "#/definitions/errorModel"
             }
           }
         },
         "tags": [
-          "blog",
-          "blogging"
+          "Audio"
         ]
       },
       "post": {
-        "summary": "add blog",
-        "description": "add a new blog",
-        "operationId": "addBlog",
+        "summary": "add audio",
+        "description": "add a new audio",
+        "operationId": "addAudio",
         "parameters": [
           {
             "name": "name",
             "in": "query",
-            "description": "name of the blog",
+            "description": "name of the audio",
             "required": true,
             "type": "string"
           },
           {
             "name": "description",
             "in": "query",
-            "description": "description of the blog",
+            "description": "description of the audio",
             "required": true,
             "type": "string"
           },
           {
             "name": "url",
             "in": "query",
-            "description": "url for the blog",
+            "description": "url of the audio",
             "required": true,
             "type": "string"
           },
           {
-            "name": "tags",
+            "name": "thumbnailUrl",
             "in": "query",
-            "description": "tags for the blog",
+            "description": "thumbnailUrl of the audio",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "creator",
+            "in": "query",
+            "description": "creator of the audio",
             "required": true,
             "type": "string"
           }
         ],
         "responses": {
           "200": {
-            "description": "blog response",
+            "description": "audio response",
             "schema": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/blog"
+                "$ref": "#/definitions/audio"
               }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "schema": {
+              "$ref": "#/definitions/errorModel"
             }
           }
         },
         "tags": [
-          "blog",
-          "blogging"
+          "audio"
         ]
       }
     },
-    "/blog/{slug}": {
+    "/{id}": {
       "get": {
-        "summary": "Retrieve a blog using its slug",
-        "description": "Returns the blog detail",
-        "operationId": "getBlog",
+        "summary": "Retrieve a audio using its ID",
+        "description": "Returns the audio detail",
+        "operationId": "getAudio",
         "parameters": [
           {
-            "name": "slug",
+            "name": "id",
             "in": "path",
-            "description": "slug for the blog, notice this is in the path, not a query variable",
+            "description": "id for the audio, notice this is in the path, not a query variable",
             "required": true,
             "type": "integer"
           }
         ],
         "responses": {
           "200": {
-            "description": "blog response",
+            "description": "audio response",
             "schema": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/blog"
+                "$ref": "#/definitions/audio"
               }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "schema": {
+              "$ref": "#/definitions/errorModel"
             }
           }
         },
         "tags": [
-          "blog",
-          "blogging"
+          "audio"
         ]
       },
       "put": {
-        "summary": "update blog",
-        "description": "update blog",
-        "operationId": "updateBlog",
+        "summary": "update audio",
+        "description": "update audio",
+        "operationId": "updateAudio",
         "parameters": [
-          {
-            "name": "slug",
-            "in": "path",
-            "description": "unique slug for the blog",
-            "required": true,
-            "type": "string"
-          },
           {
             "name": "name",
             "in": "query",
-            "description": "name of the blog",
+            "description": "name of the audio",
             "required": true,
             "type": "string"
           },
           {
             "name": "description",
             "in": "query",
-            "description": "description of the blog",
+            "description": "description of the audio",
             "required": true,
             "type": "string"
           },
           {
             "name": "url",
             "in": "query",
-            "description": "url for the blog",
+            "description": "url of the audio",
             "required": true,
             "type": "string"
           },
           {
-            "name": "tags",
+            "name": "thumbnailUrl",
             "in": "query",
-            "description": "tags for the blog",
+            "description": "thumbnailUrl of the audio",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "creator",
+            "in": "query",
+            "description": "creator of the audio",
             "required": true,
             "type": "string"
           }
         ],
         "responses": {
           "200": {
-            "description": "blog response",
+            "description": "audio response",
             "schema": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/blog"
+                "$ref": "#/definitions/audio"
               }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "schema": {
+              "$ref": "#/definitions/errorModel"
             }
           }
         },
         "tags": [
-          "blog",
-          "blogging"
+          "audio"
         ]
       },
       "delete": {
-        "summary": "delete blog",
-        "description": "deletes an blog",
-        "operationId": "deleteBlog",
+        "summary": "delete audio",
+        "description": "deletes an audio",
+        "operationId": "deleteAudio",
         "parameters": [
           {
-            "name": "slug",
+            "name": "id",
             "in": "path",
-            "description": "unique slug for the blog",
+            "description": "unique id for the audio",
             "required": true,
             "type": "string"
           }
         ],
         "responses": {
           "200": {
-            "description": "blog response",
+            "description": "audio response",
             "schema": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/blog"
+                "$ref": "#/definitions/audio"
               }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "schema": {
+              "$ref": "#/definitions/errorModel"
             }
           }
         },
         "tags": [
-          "blog",
-          "blogging"
+          "audio"
         ]
       }
     }
   },
   "definitions": {
-    "blog": {
+    "audio": {
       "properties": {
+        "id": {
+          "description": "unique id for the audio",
+          "type": "string"
+        },
         "name": {
-          "description": "name of the blog",
+          "description": "name of the audio",
           "type": "string"
         },
         "description": {
-          "description": "description of the blog",
+          "description": "description for the audio",
           "type": "string"
         },
         "url": {
-          "description": "url for the blog",
+          "description": "url for the audio contact",
           "type": "string"
         },
-        "tags": {
-          "description": "tags for the blog",
+        "thumbnailUrl": {
+          "description": "thumbnail url for the audio contact",
           "type": "string"
         },
-        "slug": {
-          "description": "slug for the blog",
+        "creator": {
+          "description": "creator for the audio contact",
           "type": "string"
         }
       }

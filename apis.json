@@ -1,7 +1,7 @@
 {
   "name": "Stack Network - Audio",
   "description": "This is my default audio API, using it to manage posts in a single API. It is a Stack Network API resource, with supporting docker container for the API.",
-  "image": "https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-audio-icon.png",
+  "image": "https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-audio.png",
   "tags": [
     "application programming interface",
     "API",
@@ -15,7 +15,7 @@
     {
       "name": "Audio",
       "description": "A audio API resource.",
-      "image": "https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-audio-icon.png",
+      "image": "https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-audio.png",
       "humanURL": "https://kin-lane.github.io/audio/",
       "baseURL": "http://audio.api.kinlane.com",
       "tags": [

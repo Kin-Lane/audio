@@ -109,7 +109,7 @@
           }
         },
         "tags": [
-          "audio"
+          "Audio"
         ]
       }
     },
@@ -145,7 +145,7 @@
           }
         },
         "tags": [
-          "audio"
+          "Audio"
         ]
       },
       "put": {
@@ -207,7 +207,7 @@
           }
         },
         "tags": [
-          "audio"
+          "Audio"
         ]
       },
       "delete": {
@@ -241,7 +241,7 @@
           }
         },
         "tags": [
-          "audio"
+          "Audio"
         ]
       }
     }

@@ -22,6 +22,20 @@
         "operationId": "getAudio",
         "parameters": [
           {
+            "name": "appid",
+            "in": "query",
+            "description": "your appid for accessing the API",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appkey",
+            "in": "query",
+            "description": "your appkey for accessing the API",
+            "required": true,
+            "type": "string"
+          },         
+          {
             "name": "query",
             "in": "query",
             "description": "a text query to search across audio",
@@ -55,6 +69,20 @@
         "description": "add a new audio",
         "operationId": "addAudio",
         "parameters": [
+          {
+            "name": "appid",
+            "in": "query",
+            "description": "your appid for accessing the API",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appkey",
+            "in": "query",
+            "description": "your appkey for accessing the API",
+            "required": true,
+            "type": "string"
+          },         
           {
             "name": "name",
             "in": "query",
@@ -113,19 +141,33 @@
         ]
       }
     },
-    "/audio/{id}/": {
+    "/audio/{audio_id}/": {
       "get": {
         "summary": "Retrieve a audio using its ID",
         "description": "Returns the audio detail",
         "operationId": "getAudio",
         "parameters": [
           {
-            "name": "id",
+            "name": "audio_id",
             "in": "path",
-            "description": "id for the audio, notice this is in the path, not a query variable",
+            "description": "unique id for the audio",
             "required": true,
             "type": "integer"
-          }
+          },
+          {
+            "name": "appid",
+            "in": "query",
+            "description": "your appid for accessing the API",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appkey",
+            "in": "query",
+            "description": "your appkey for accessing the API",
+            "required": true,
+            "type": "string"
+          }          
         ],
         "responses": {
           "200": {
@@ -153,6 +195,27 @@
         "description": "update audio",
         "operationId": "updateAudio",
         "parameters": [
+          {
+            "name": "audio_id",
+            "in": "path",
+            "description": "unique id for the audio",
+            "required": true,
+            "type": "integer"
+          },
+          {
+            "name": "appid",
+            "in": "query",
+            "description": "your appid for accessing the API",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appkey",
+            "in": "query",
+            "description": "your appkey for accessing the API",
+            "required": true,
+            "type": "string"
+          },        
           {
             "name": "name",
             "in": "query",
@@ -216,9 +279,23 @@
         "operationId": "deleteAudio",
         "parameters": [
           {
-            "name": "id",
+            "name": "audio_id",
             "in": "path",
             "description": "unique id for the audio",
+            "required": true,
+            "type": "integer"
+          },
+          {
+            "name": "appid",
+            "in": "query",
+            "description": "your appid for accessing the API",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appkey",
+            "in": "query",
+            "description": "your appkey for accessing the API",
             "required": true,
             "type": "string"
           }

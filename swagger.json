@@ -15,7 +15,7 @@
     "application/json"
   ],
   "paths": {
-    "/": {
+    "/audio/": {
       "get": {
         "summary": "retrieves all audio",
         "description": "pulls all audio, with filter by keyword",
@@ -113,7 +113,7 @@
         ]
       }
     },
-    "/{id}": {
+    "/audio/{id}/": {
       "get": {
         "summary": "Retrieve a audio using its ID",
         "description": "Returns the audio detail",

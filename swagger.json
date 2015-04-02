@@ -141,6 +141,152 @@
         ]
       }
     },
+    ""/audio/{audio_id}/tags/": {
+      "get": {
+        "summary": "retrieve audio tags",
+        "description": "Returns the tags for an audio",
+        "operationId": "getaudioTags",
+        "parameters": [
+          {
+            "name": "audio_id",
+            "in": "path",
+            "description": "id for audio",
+            "required": true,
+            "type": "integer",
+            "format": "id"
+          },
+          {
+            "name": "appid",
+            "in": "query",
+            "description": "your appid for accessing the audio",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appkey",
+            "in": "query",
+            "description": "your appkey for accessing the audio",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "People Tags Response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/tag"
+              }
+            }
+          }
+        },
+        "tags": [
+          "Tags"
+        ]
+      },
+      "post": {
+        "summary": "add tag to audio",
+        "description": "add tag for audio",
+        "operationId": "addPeopleTag",
+        "parameters": [
+          {
+            "name": "audio_id",
+            "in": "path",
+            "description": "id for the audio",
+            "required": true,
+            "type": "integer",
+            "format": "id"
+          },
+          {
+            "name": "appid",
+            "in": "formData",
+            "description": "your appid for accessing the audio",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appkey",
+            "in": "formData",
+            "description": "your appkey for accessing the audio",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "tag",
+            "in": "formData",
+            "description": "tag name",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "People Response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/tag"
+              }
+            }
+          }
+        },
+        "tags": [
+          "Tags"
+        ]
+      }
+    },
+    ""/audio/{audio_id}/tags/{tag}": {
+      "delete": {
+        "summary": "delete a audio tag",
+        "description": "deletes a tag applied to audio",
+        "operationId": "deleteaudioTag",
+        "parameters": [
+          {
+            "name": "audio_id",
+            "in": "path",
+            "description": "id for the audio",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appid",
+            "in": "query",
+            "description": "your appid for accessing the audio",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appkey",
+            "in": "query",
+            "description": "your appkey for accessing the audio",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "tag",
+            "in": "path",
+            "description": "tag to remove from audio",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "People Tag Response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/tag"
+              }
+            }
+          }
+        },
+        "tags": [
+          "Tags"
+        ]
+      }
+    },    
     "/audio/{audio_id}/": {
       "get": {
         "summary": "Retrieve a audio using its ID",

@@ -498,18 +498,20 @@
         }
       }
     },
-    "errorModel": {
-      "required": [
-        "code",
-        "message"
-      ],
+    "tag": {
       "properties": {
-        "code": {
+        "tag_id": {
+          "description": "id for the tag",
           "type": "integer",
-          "format": "int32"
+          "format": "id"
         },
-        "message": {
+        "tag": {
+          "description": "text tag",
           "type": "string"
+        },
+        "api_count": {
+          "description": "number of items api with tag",
+          "type": "integer"
         }
       }
     }

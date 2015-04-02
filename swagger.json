@@ -34,7 +34,7 @@
             "description": "your appkey for accessing the API",
             "required": true,
             "type": "string"
-          },         
+          },
           {
             "name": "query",
             "in": "query",
@@ -82,7 +82,7 @@
             "description": "your appkey for accessing the API",
             "required": true,
             "type": "string"
-          },         
+          },
           {
             "name": "name",
             "in": "query",
@@ -286,7 +286,7 @@
           "Tags"
         ]
       }
-    },    
+    },
     "/audio/{audio_id}/": {
       "get": {
         "summary": "Retrieve a audio using its ID",
@@ -313,7 +313,7 @@
             "description": "your appkey for accessing the API",
             "required": true,
             "type": "string"
-          }          
+          }
         ],
         "responses": {
           "200": {
@@ -361,7 +361,7 @@
             "description": "your appkey for accessing the API",
             "required": true,
             "type": "string"
-          },        
+          },
           {
             "name": "name",
             "in": "query",

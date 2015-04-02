@@ -141,7 +141,7 @@
         ]
       }
     },
-    ""/audio/{audio_id}/tags/": {
+    "/audio/{audio_id}/tags/": {
       "get": {
         "summary": "retrieve audio tags",
         "description": "Returns the tags for an audio",
@@ -236,7 +236,7 @@
         ]
       }
     },
-    ""/audio/{audio_id}/tags/{tag}": {
+    "/audio/{audio_id}/tags/{tag}": {
       "delete": {
         "summary": "delete a audio tag",
         "description": "deletes a tag applied to audio",

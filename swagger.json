@@ -6,7 +6,7 @@
     "termsOfService": "http://stack.network/terms-of-service.html",
     "version": "v1"
   },
-  "host": "audio.kinlane.com.us-east.audioapi.api",
+  "host": "audio.api.kinlane.com",
   "basePath": "/",
   "schemes": [
     "http"

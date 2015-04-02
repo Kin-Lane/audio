@@ -2,7 +2,7 @@
   "swagger": "2.0",
   "info": {
     "title": "Audio",
-    "description": "This is a audio api",
+    "description": "This is my audio API for keeping track of audio files I create, and find across the internet. It doesn't store the audio currently, just provides a pointer to where it exists, and some meta data to support.",
     "termsOfService": "http://stack.network/terms-of-service.html",
     "version": "v1"
   },
@@ -71,35 +71,35 @@
         "parameters": [
           {
             "name": "appid",
-            "in": "query",
+            "in": "formData",
             "description": "your appid for accessing the API",
             "required": true,
             "type": "string"
           },
           {
             "name": "appkey",
-            "in": "query",
+            "in": "formData",
             "description": "your appkey for accessing the API",
             "required": true,
             "type": "string"
           },
           {
             "name": "name",
-            "in": "query",
+            "in": "formData",
             "description": "name of the audio",
             "required": true,
             "type": "string"
           },
           {
             "name": "description",
-            "in": "query",
+            "in": "formData",
             "description": "description of the audio",
-            "required": true,
+            "required": false,
             "type": "string"
           },
           {
             "name": "url",
-            "in": "query",
+            "in": "formData",
             "description": "url of the audio",
             "required": true,
             "type": "string"
@@ -108,14 +108,14 @@
             "name": "thumbnailUrl",
             "in": "query",
             "description": "thumbnailUrl of the audio",
-            "required": true,
+            "required": false,
             "type": "string"
           },
           {
             "name": "creator",
             "in": "query",
             "description": "creator of the audio",
-            "required": true,
+            "required": false,
             "type": "string"
           }
         ],
@@ -350,35 +350,35 @@
           },
           {
             "name": "appid",
-            "in": "query",
+            "in": "formData",
             "description": "your appid for accessing the API",
             "required": true,
             "type": "string"
           },
           {
             "name": "appkey",
-            "in": "query",
+            "in": "formData",
             "description": "your appkey for accessing the API",
             "required": true,
             "type": "string"
           },
           {
             "name": "name",
-            "in": "query",
+            "in": "formData",
             "description": "name of the audio",
             "required": true,
             "type": "string"
           },
           {
             "name": "description",
-            "in": "query",
+            "in": "formData",
             "description": "description of the audio",
-            "required": true,
+            "required": false,
             "type": "string"
           },
           {
             "name": "url",
-            "in": "query",
+            "in": "formData",
             "description": "url of the audio",
             "required": true,
             "type": "string"
@@ -387,14 +387,14 @@
             "name": "thumbnailUrl",
             "in": "query",
             "description": "thumbnailUrl of the audio",
-            "required": true,
+            "required": false,
             "type": "string"
           },
           {
             "name": "creator",
             "in": "query",
             "description": "creator of the audio",
-            "required": true,
+            "required": false,
             "type": "string"
           }
         ],

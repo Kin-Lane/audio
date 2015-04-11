@@ -52,12 +52,6 @@
                 "$ref": "#/definitions/audio"
               }
             }
-          },
-          "default": {
-            "description": "unexpected error",
-            "schema": {
-              "$ref": "#/definitions/errorModel"
-            }
           }
         },
         "tags": [
@@ -127,12 +121,6 @@
               "items": {
                 "$ref": "#/definitions/audio"
               }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "schema": {
-              "$ref": "#/definitions/errorModel"
             }
           }
         },
@@ -323,12 +311,6 @@
               "items": {
                 "$ref": "#/definitions/audio"
               }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "schema": {
-              "$ref": "#/definitions/errorModel"
             }
           }
         },

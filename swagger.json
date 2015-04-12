@@ -389,12 +389,6 @@
                 "$ref": "#/definitions/audio"
               }
             }
-          },
-          "default": {
-            "description": "unexpected error",
-            "schema": {
-              "$ref": "#/definitions/errorModel"
-            }
           }
         },
         "tags": [

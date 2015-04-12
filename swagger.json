@@ -431,12 +431,6 @@
                 "$ref": "#/definitions/audio"
               }
             }
-          },
-          "default": {
-            "description": "unexpected error",
-            "schema": {
-              "$ref": "#/definitions/errorModel"
-            }
           }
         },
         "tags": [
@@ -450,7 +444,7 @@
       "properties": {
         "audio_id": {
           "description": "unique id for the audio",
-          "type": "string"
+          "type": "integer"
         },
         "name": {
           "description": "name of the audio",

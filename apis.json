@@ -27,7 +27,11 @@
         {
           "type": "Swagger",
           "url": "https://kin-lane.github.io/audio/swagger.json"
-        }
+        },
+        {
+          "type": "x-api-code-libraries",
+          "url": "https://kin-lane.github.io/audio/api-code-libraries.json"
+        }  
       ],
       "contact": [
         {

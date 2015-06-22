@@ -29,9 +29,17 @@
           "url": "https://kin-lane.github.io/audio/swagger.json"
         },
         {
-          "type": "x-api-code-libraries",
-          "url": "https://kin-lane.github.io/audio/api-code-libraries.json"
-        }  
+          "type": "x-postman",
+          "url": "https://kin-lane.github.io/audio/postman.json"
+        },
+        {
+          "type": "x-apimatic-sdks",
+          "url": "https://kin-lane.github.io/audio/code/"
+        },
+        {
+          "type": "x-api-science",
+          "url": "https://kin-lane.github.io/audio/status/"
+        }         
       ],
       "contact": [
         {

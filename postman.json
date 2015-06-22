@@ -1,0 +1,337 @@
+{
+	"id": "ca72055f-08db-4449-8897-1c32d6ed5c44",
+	"name": "Audio",
+	"description": "This is my audio API for keeping track of audio files I create, and find across the internet. It doesn't store the audio currently, just provides a pointer to where it exists, and some meta data to support.",
+	"order": [],
+	"folders": [
+		{
+			"id": "f8415195-e214-4c61-a9d5-1cc258d8e22a",
+			"name": "audio",
+			"description": "Folder for audio",
+			"order": [
+				"c2b4836e-9cbd-465a-b3ea-dbd7a078e2ba",
+				"29fe7e54-dc92-4ef5-9b8b-426e6bc5eaaf",
+				"a377e1b0-3831-43b7-b5f3-d30cc0c60867",
+				"150ef778-bb06-4aa0-a5fa-b37178a110f9",
+				"9b472784-a9e9-47b7-b50e-dd4e0c5c6283",
+				"3889ce55-e4fb-4956-abdd-398a7ac35512",
+				"394a8d44-a6ef-4107-b4d4-0a60431f6502",
+				"9cfad2bf-9e9b-44d8-ac41-bdbed5d2e1de"
+			],
+			"collection_name": "Audio",
+			"collection_id": "ca72055f-08db-4449-8897-1c32d6ed5c44",
+			"collection": "ca72055f-08db-4449-8897-1c32d6ed5c44",
+			"owner": "27278"
+		}
+	],
+	"timestamp": 1413302258635,
+	"synced": false,
+	"owner": "27278",
+	"sharedWithTeam": false,
+	"subscribed": false,
+	"hasRequests": true,
+	"requests": [
+		{
+			"id": "150ef778-bb06-4aa0-a5fa-b37178a110f9",
+			"headers": "",
+			"url": "http://audio.api.kinlane.com//audio/{{audio_id}}/tags/",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "POST",
+			"data": [
+				{
+					"key": "size",
+					"value": "original",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "appid",
+					"value": "{{appid}}",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "appkey",
+					"value": "{{appkey}}",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "tag",
+					"value": "{{tag}}",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"description": "add tag for audio",
+			"descriptionFormat": "html",
+			"time": 1434932445024,
+			"version": 2,
+			"responses": [],
+			"tests": "",
+			"collectionId": "ca72055f-08db-4449-8897-1c32d6ed5c44",
+			"synced": false,
+			"name": "add tag to audio",
+			"owner": "27278",
+			"folder": "f8415195-e214-4c61-a9d5-1cc258d8e22a"
+		},
+		{
+			"id": "29fe7e54-dc92-4ef5-9b8b-426e6bc5eaaf",
+			"headers": "",
+			"url": "http://audio.api.kinlane.com//audio/?thumbnailUrl={{thumbnailUrl}}&creator={{creator}}&",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "POST",
+			"data": [
+				{
+					"key": "size",
+					"value": "original",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "appid",
+					"value": "{{appid}}",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "appkey",
+					"value": "{{appkey}}",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "name",
+					"value": "{{name}}",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "description",
+					"value": "{{description}}",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "url",
+					"value": "{{url}}",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"description": "add a new audio",
+			"descriptionFormat": "html",
+			"time": 1434932445024,
+			"version": 2,
+			"responses": [],
+			"tests": "",
+			"collectionId": "ca72055f-08db-4449-8897-1c32d6ed5c44",
+			"synced": false,
+			"name": "add audio",
+			"owner": "27278",
+			"folder": "f8415195-e214-4c61-a9d5-1cc258d8e22a"
+		},
+		{
+			"id": "3889ce55-e4fb-4956-abdd-398a7ac35512",
+			"headers": "",
+			"url": "http://audio.api.kinlane.com//audio/{{audio_id}}/?appid={{appid}}&appkey={{appkey}}&",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "GET",
+			"data": [
+				{
+					"key": "size",
+					"value": "original",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"description": "Returns the audio detail",
+			"descriptionFormat": "html",
+			"time": 1434932445024,
+			"version": 2,
+			"responses": [],
+			"tests": "",
+			"collectionId": "ca72055f-08db-4449-8897-1c32d6ed5c44",
+			"synced": false,
+			"name": "Retrieve a audio using its ID",
+			"owner": "27278",
+			"folder": "f8415195-e214-4c61-a9d5-1cc258d8e22a"
+		},
+		{
+			"id": "394a8d44-a6ef-4107-b4d4-0a60431f6502",
+			"headers": "",
+			"url": "http://audio.api.kinlane.com//audio/{{audio_id}}/?thumbnailUrl={{thumbnailUrl}}&creator={{creator}}&",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "PUT",
+			"data": [
+				{
+					"key": "size",
+					"value": "original",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "appid",
+					"value": "{{appid}}",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "appkey",
+					"value": "{{appkey}}",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "name",
+					"value": "{{name}}",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "description",
+					"value": "{{description}}",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "url",
+					"value": "{{url}}",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"description": "update audio",
+			"descriptionFormat": "html",
+			"time": 1434932445024,
+			"version": 2,
+			"responses": [],
+			"tests": "",
+			"collectionId": "ca72055f-08db-4449-8897-1c32d6ed5c44",
+			"synced": false,
+			"name": "update audio",
+			"owner": "27278",
+			"folder": "f8415195-e214-4c61-a9d5-1cc258d8e22a"
+		},
+		{
+			"id": "9b472784-a9e9-47b7-b50e-dd4e0c5c6283",
+			"headers": "",
+			"url": "http://audio.api.kinlane.com//audio/{{audio_id}}/tags/{tag}?appid={{appid}}&appkey={{appkey}}&",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "DELETE",
+			"data": [
+				{
+					"key": "size",
+					"value": "original",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"description": "deletes a tag applied to audio",
+			"descriptionFormat": "html",
+			"time": 1434932445024,
+			"version": 2,
+			"responses": [],
+			"tests": "",
+			"collectionId": "ca72055f-08db-4449-8897-1c32d6ed5c44",
+			"synced": false,
+			"name": "delete a audio tag",
+			"owner": "27278",
+			"folder": "f8415195-e214-4c61-a9d5-1cc258d8e22a"
+		},
+		{
+			"id": "9cfad2bf-9e9b-44d8-ac41-bdbed5d2e1de",
+			"headers": "",
+			"url": "http://audio.api.kinlane.com//audio/{{audio_id}}/?appid={{appid}}&appkey={{appkey}}&",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "DELETE",
+			"data": [
+				{
+					"key": "size",
+					"value": "original",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"description": "deletes an audio",
+			"descriptionFormat": "html",
+			"time": 1434932445024,
+			"version": 2,
+			"responses": [],
+			"tests": "",
+			"collectionId": "ca72055f-08db-4449-8897-1c32d6ed5c44",
+			"synced": false,
+			"name": "delete audio",
+			"owner": "27278",
+			"folder": "f8415195-e214-4c61-a9d5-1cc258d8e22a"
+		},
+		{
+			"id": "a377e1b0-3831-43b7-b5f3-d30cc0c60867",
+			"headers": "",
+			"url": "http://audio.api.kinlane.com//audio/{{audio_id}}/tags/?appid={{appid}}&appkey={{appkey}}&",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "GET",
+			"data": [
+				{
+					"key": "size",
+					"value": "original",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"description": "Returns the tags for an audio",
+			"descriptionFormat": "html",
+			"time": 1434932445024,
+			"version": 2,
+			"responses": [],
+			"tests": "",
+			"collectionId": "ca72055f-08db-4449-8897-1c32d6ed5c44",
+			"synced": false,
+			"name": "retrieve audio tags",
+			"owner": "27278",
+			"folder": "f8415195-e214-4c61-a9d5-1cc258d8e22a"
+		},
+		{
+			"id": "c2b4836e-9cbd-465a-b3ea-dbd7a078e2ba",
+			"headers": "",
+			"url": "http://audio.api.kinlane.com//audio/?appid={{appid}}&appkey={{appkey}}&query={{query}}&",
+			"pathVariables": {},
+			"preRequestScript": "",
+			"method": "GET",
+			"data": [
+				{
+					"key": "size",
+					"value": "original",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"description": "pulls all audio, with filter by keyword",
+			"descriptionFormat": "html",
+			"time": 1434932445024,
+			"version": 2,
+			"responses": [],
+			"tests": "",
+			"collectionId": "ca72055f-08db-4449-8897-1c32d6ed5c44",
+			"synced": false,
+			"name": "retrieves all audio",
+			"owner": "27278",
+			"folder": "f8415195-e214-4c61-a9d5-1cc258d8e22a"
+		}
+	]
+}

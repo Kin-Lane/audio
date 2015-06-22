@@ -4,8 +4,9 @@ $route = '/audio/:audio_id/tags/:tag/';
 $app->delete($route, function ($audio_id,$tag)  use ($app){
 
   	$host = $_SERVER['HTTP_HOST'];		
+	$audio_id = prepareIdIn($audio_id);
  	$audio_id = decrypt($audio_id,$host);
-
+	
 	$ReturnObject = array();
 		
  	$request = $app->request(); 
@@ -28,6 +29,7 @@ $app->delete($route, function ($audio_id,$tag)  use ($app){
 			}
 
 		$tag_id = encrypt($tag_id,$host);
+		$tag_id = prepareIdOut($tag_id);
 
 		$F = array();
 		$F['tag_id'] = $tag_id;

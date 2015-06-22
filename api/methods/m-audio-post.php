@@ -24,6 +24,7 @@ $app->post($route, function () use ($app){
 		$audio_id = $Link['audio_id'];
 
 		$audio_id = encrypt($audio_id,$host);
+		$audio_id = prepareIdOut($audio_id);
 			
 		$ReturnObject = array();												
 		$ReturnObject['message'] = "Audio Already Exists!";			
@@ -57,6 +58,7 @@ $app->post($route, function () use ($app){
 		$audio_id = mysql_insert_id();
 
       $audio_id = encrypt($audio_id,$host);
+		$audio_id = prepareIdOut($audio_id);
 		
 		$ReturnObject = array();												
 		$ReturnObject['message'] = "Audio Added!";

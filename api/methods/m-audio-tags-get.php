@@ -22,6 +22,7 @@ $app->get($route, function ()  use ($app){
 
    	$host = $_SERVER['HTTP_HOST'];		
 		$tag_id = encrypt($tag_id,$host);
+		$tag_id = prepareIdOut($tag_id);
 
 		$F = array();
 		$F['tag_id'] = $tag_id;

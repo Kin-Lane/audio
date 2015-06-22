@@ -8,6 +8,7 @@ require '../Slim/Slim.php';
 require('../3scale/ThreeScaleClient.php');
 require_once('../client/GitHubClient.php');
 require_once('../parse/index.php');
+require_once('../libraries/utility.php');
 require '/var/www/html/system/class-amazon-s3.php';
 
 $gclient = new GitHubClient();

@@ -292,13 +292,13 @@ function prepareIdIn($id,$host)
 	$id =  str_replace("113",chr(40),$id);
 	$id =  str_replace("114",chr(41),$id);
 	$id =  str_replace("115",chr(32),$id);
-	$id = decrypt($id_id,$host);
+	$id = decrypt($id,$host);
 	return $id;
 	}
 
 function prepareIdOut($id,$host)
 	{
-	$id = encrypt($id_id,$host);
+	$id = encrypt($id,$host);
 	$id =  str_replace("/","123",$id);
 	$id =  str_replace("?","234",$id);
 	$id =  str_replace("#","456",$id);

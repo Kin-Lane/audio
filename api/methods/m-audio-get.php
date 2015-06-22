@@ -34,8 +34,7 @@ $app->get($route, function ()  use ($app){
 		
 		// manipulation zone	
 
-		$audio_id = encrypt($audio_id,$host);
-		$audio_id = prepareIdOut($audio_id);				
+		$audio_id = prepareIdOut($audio_id,$host);				
 
 		$F = array();
 		$F['audio_id'] = $audio_id;

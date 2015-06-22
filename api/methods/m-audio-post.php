@@ -3,7 +3,6 @@ $route = '/audio/';
 $app->post($route, function () use ($app){
 
    $host = $_SERVER['HTTP_HOST'];		
- 	$audio_id = decrypt($audio_id,$host);
 
  	$request = $app->request(); 
  	$_POST = $request->params();			

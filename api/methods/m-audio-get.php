@@ -3,7 +3,6 @@ $route = '/audio/';
 $app->get($route, function ()  use ($app){
 
    $host = $_SERVER['HTTP_HOST'];		
- 	$audio_id = decrypt($audio_id,$host);
 
 	$ReturnObject = array();
 

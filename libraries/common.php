@@ -176,9 +176,9 @@ function prettyPrint( $json )
             $new_line_level = $ends_line_level;
             $ends_line_level = NULL;
         }
-        if( $char === '"' && $prev_char != '\\' ) {
-            $in_quotes = !$in_quotes;
-        } else if( ! $in_quotes ) {
+			if( $char === '"' && $prev_char != '\\' ) {
+				$in_quotes = !$in_quotes;
+			} else if( ! $in_quotes ) {
             switch( $char ) {
                 case '}': case ']':
                     $level--;

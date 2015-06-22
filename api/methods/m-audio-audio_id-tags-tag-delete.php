@@ -3,6 +3,8 @@
 $route = '/audio/:audio_id/tags/:tag/';
 $app->delete($route, function ($audio_id,$tag)  use ($app){
 
+  	$host = $_SERVER['HTTP_HOST'];		
+ 	$audio_id = decrypt($audio_id,$host);
 
 	$ReturnObject = array();
 		
@@ -24,6 +26,8 @@ $app->delete($route, function ($audio_id,$tag)  use ($app){
 			$DeleteQuery = "DELETE FROM audio_tag_pivot WHERE tag_id = " . trim($tag_id) . " AND audio_id = " . trim($audio_id);
 			$DeleteResult = mysql_query($DeleteQuery) or die('Query failed: ' . mysql_error());
 			}
+
+		$tag_id = encrypt($tag_id,$host);
 
 		$F = array();
 		$F['tag_id'] = $tag_id;

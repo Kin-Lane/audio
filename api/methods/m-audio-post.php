@@ -2,6 +2,9 @@
 $route = '/audio/';	
 $app->post($route, function () use ($app){
 
+   $host = $_SERVER['HTTP_HOST'];		
+ 	$audio_id = decrypt($audio_id,$host);
+
  	$request = $app->request(); 
  	$_POST = $request->params();			
 	
@@ -20,6 +23,8 @@ $app->post($route, function () use ($app){
 		$Link = mysql_fetch_assoc($LinkResult);	
 		
 		$audio_id = $Link['audio_id'];
+
+		$audio_id = encrypt($audio_id,$host);
 			
 		$ReturnObject = array();												
 		$ReturnObject['message'] = "Audio Already Exists!";			
@@ -51,6 +56,8 @@ $app->post($route, function () use ($app){
 		//echo $query . "<br />";
 		mysql_query($query) or die('Query failed: ' . mysql_error());
 		$audio_id = mysql_insert_id();
+
+      $audio_id = encrypt($audio_id,$host);
 		
 		$ReturnObject = array();												
 		$ReturnObject['message'] = "Audio Added!";

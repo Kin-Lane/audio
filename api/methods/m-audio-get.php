@@ -2,6 +2,9 @@
 $route = '/audio/';
 $app->get($route, function ()  use ($app){
 
+   $host = $_SERVER['HTTP_HOST'];		
+ 	$audio_id = decrypt($audio_id,$host);
+
 	$ReturnObject = array();
 
 	if(isset($_REQUEST['query'])){ $query = $_REQUEST['query']; } else { $query = '';}
@@ -30,7 +33,9 @@ $app->get($route, function ()  use ($app){
 		$thumbnailUrl = $Audio['thumbnailUrl'];
 		$creator = $Audio['creator'];
 		
-		// manipulation zone				
+		// manipulation zone	
+
+		$audio_id = encrypt($audio_id,$host);
 				
 		$F = array();
 		$F['audio_id'] = $audio_id;

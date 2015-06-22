@@ -2,6 +2,8 @@
 $route = '/audio/:audio_id/';
 $app->get($route, function ($audio_id)  use ($app){
 
+   $host = $_SERVER['HTTP_HOST'];		
+ 	$audio_id = decrypt($audio_id,$host);
 
 	$ReturnObject = array();
 		
@@ -21,6 +23,8 @@ $app->get($route, function ($audio_id)  use ($app){
 		$creator = $Audio['creator'];
 		
 		// manipulation zone
+		
+		$audio_id = encrypt($audio_id,$host);
 		
 		$F = array();
 		$F['audio_id'] = $audio_id;

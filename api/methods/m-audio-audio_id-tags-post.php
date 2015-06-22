@@ -2,6 +2,8 @@
 $route = '/audio/:audio_id/tags/';
 $app->post($route, function ($audio_id)  use ($app){
 
+   $host = $_SERVER['HTTP_HOST'];		
+ 	$audio_id = decrypt($audio_id,$host);
 
 	$ReturnObject = array();
 		
@@ -39,6 +41,8 @@ $app->post($route, function ($audio_id)  use ($app){
 			$query = "INSERT INTO audio_tag_pivot(tag_id,audio_id) VALUES(" . $tag_id . "," . $audio_id . "); ";
 			mysql_query($query) or die('Query failed: ' . mysql_error());					
 			}
+
+		$tag_id = encrypt($tag_id,$host);
 
 		$F = array();
 		$F['tag_id'] = $tag_id;

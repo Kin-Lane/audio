@@ -1,4 +1,4 @@
-audioapi
+Audio API
 ========
 
-audioapi
+This is the repo for my audio API.

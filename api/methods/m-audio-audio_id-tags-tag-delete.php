@@ -4,8 +4,7 @@ $route = '/audio/:audio_id/tags/:tag/';
 $app->delete($route, function ($audio_id,$tag)  use ($app){
 
   	$host = $_SERVER['HTTP_HOST'];		
-	$audio_id = prepareIdIn($audio_id);
- 	$audio_id = decrypt($audio_id,$host);
+	$audio_id = prepareIdIn($audio_id,$host);
 	
 	$ReturnObject = array();
 		
@@ -28,8 +27,7 @@ $app->delete($route, function ($audio_id,$tag)  use ($app){
 			$DeleteResult = mysql_query($DeleteQuery) or die('Query failed: ' . mysql_error());
 			}
 
-		$tag_id = encrypt($tag_id,$host);
-		$tag_id = prepareIdOut($tag_id);
+		$tag_id = prepareIdOut($tag_id,$host);
 
 		$F = array();
 		$F['tag_id'] = $tag_id;

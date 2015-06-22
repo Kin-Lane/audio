@@ -3,8 +3,7 @@ $route = '/audio/:audio_id/tags/';
 $app->post($route, function ($audio_id)  use ($app){
 
    $host = $_SERVER['HTTP_HOST'];	
- 	$audio_id = prepareIdIn($audio_id);
- 	$audio_id = decrypt($audio_id,$host);
+ 	$audio_id = prepareIdIn($audio_id,$host);
 
 	$ReturnObject = array();
 		
@@ -43,8 +42,7 @@ $app->post($route, function ($audio_id)  use ($app){
 			mysql_query($query) or die('Query failed: ' . mysql_error());					
 			}
 
-		$tag_id = encrypt($tag_id,$host);
-		$tag_id = prepareIdOut($tag_id);
+		$tag_id = prepareIdOut($tag_id,$host);
 
 		$F = array();
 		$F['tag_id'] = $tag_id;

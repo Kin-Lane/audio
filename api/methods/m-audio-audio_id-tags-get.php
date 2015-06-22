@@ -3,8 +3,7 @@ $route = '/audio/:audio_id/tags/';
 $app->get($route, function ($audio_id)  use ($app){
 
    $host = $_SERVER['HTTP_HOST'];		
-	$audio_id = prepareIdIn($audio_id);
- 	$audio_id = decrypt($audio_id,$host);
+	$audio_id = prepareIdIn($audio_id,$host);
 
 	$ReturnObject = array();
 		
@@ -22,8 +21,7 @@ $app->get($route, function ($audio_id)  use ($app){
 		$tag = $Database['tag'];
 		$audio_count = $Database['Profile_Count'];
 
-		$audio_id = encrypt($audio_id,$host);
-		$audio_id = prepareIdOut($audio_id);
+		$audio_id = prepareIdOut($audio_id,$host);
 
 		$F = array();
 		$F['tag_id'] = $tag_id;

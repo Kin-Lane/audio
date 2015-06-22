@@ -3,8 +3,7 @@ $route = '/audio/:audio_id/';
 $app->put($route, function ($audio_id) use ($app){
 	
    $host = $_SERVER['HTTP_HOST'];		
-	$audio_id = prepareIdIn($audio_id);
- 	$audio_id = decrypt($audio_id,$host);
+	$audio_id = prepareIdIn($audio_id,$host);
 
  	$request = $app->request(); 
  	$_POST = $request->params();	
@@ -49,8 +48,7 @@ $app->put($route, function ($audio_id) use ($app){
 		//echo $query . "<br />";
 		mysql_query($query) or die('Query failed: ' . mysql_error());
 		
-		$audio_id = encrypt($audio_id,$host);
-		$audio_id = prepareIdOut($audio_id);
+		$audio_id = prepareIdOut($audio_id,$host);
 
 		$ReturnObject = array();												
 		$ReturnObject['message'] = "Audio Updated!";
@@ -61,8 +59,7 @@ $app->put($route, function ($audio_id) use ($app){
 		{	
 		$Link = mysql_fetch_assoc($LinkResult);	
 
-		$audio_id = encrypt($audio_id,$host);
-		$audio_id = prepareIdOut($audio_id);
+		$audio_id = prepareIdOut($audio_id,$host);
 			
 		$ReturnObject = array();												
 		$ReturnObject['message'] = "Audio Doesn't Exist!";			

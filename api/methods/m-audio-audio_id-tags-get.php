@@ -21,7 +21,7 @@ $app->get($route, function ($audio_id)  use ($app){
 		$tag = $Database['tag'];
 		$audio_count = $Database['Profile_Count'];
 
-		$audio_id = prepareIdOut($audio_id,$host);
+		$tag_id = prepareIdOut($tag_id,$host);
 
 		$F = array();
 		$F['tag_id'] = $tag_id;

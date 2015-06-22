@@ -292,6 +292,8 @@ function prepareIdIn($id,$host)
 	$id =  str_replace("113",chr(40),$id);
 	$id =  str_replace("114",chr(41),$id);
 	$id =  str_replace("115",chr(32),$id);
+	$id =  str_replace("116","+",$id);
+	$id =  str_replace("117","=",$id);
 	$id = decrypt($id,$host);
 	return $id;
 	}
@@ -307,6 +309,8 @@ function prepareIdOut($id,$host)
 	$id =  str_replace(chr(40),"113",$id);
 	$id =  str_replace(chr(41),"114",$id);
 	$id =  str_replace(chr(32),"115",$id);
+	$id =  str_replace("+","116",$id);
+	$id =  str_replace("=","117",$id);
 	return $id;
 	}
 ?>

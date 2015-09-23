@@ -1,0 +1,273 @@
+FORMAT: 1A
+HOST: https://audio.api.kinlane.com/
+
+# Audio
+This is my audio API for keeping track of audio files I create, and find across the internet. It doesn't store the audio currently, just provides a pointer to where it exists, and some meta data to support.
+
+## Authentication
+This API uses Custom Query Parameter for its authentication.
+
+The parameters that are needed to be sent for this type of authentication are as follows:
++ `appid`
++ `appkey`
+
+# Group Audio
+
+## Audio [/audio/{?appid,appkey,query}]
+
+### getAudio [GET]
+pulls all audio, with filter by keyword
++ Parameters
+    + appid (string, required)
+
+        your appid for accessing the API
+
+    + appkey (string, required)
+
+        your appkey for accessing the API
+
+    + query (string, optional)
+
+        a text query to search across audio
+
+
++ Response 200 (application/json)
+    + Attributes (array[audio])
+
+
+## Audio [/audio/{?thumbnailUrl,creator}]
+
+### addAudio [POST]
+add a new audio
++ Parameters
+    + appid (string, required)
+
+        your appid for accessing the API
+
+    + appkey (string, required)
+
+        your appkey for accessing the API
+
+    + name (string, required)
+
+        name of the audio
+
+    + description (string, optional)
+
+        description of the audio
+
+    + url (string, required)
+
+        url of the audio
+
+    + thumbnailUrl (string, optional)
+
+        thumbnailUrl of the audio
+
+    + creator (string, optional)
+
+        creator of the audio
+
+
++ Response 200 (application/json)
+    + Attributes (array[audio])
+
+
+## Audio By Audio Id [/audio/{audio_id}/{?appid,appkey}]
+
++ Parameters
+    + audio_id (number, required)
+
+        unique id for the audio
+
+
+### getAudio [GET]
+Returns the audio detail
++ Parameters
+    + appid (string, required)
+
+        your appid for accessing the API
+
+    + appkey (string, required)
+
+        your appkey for accessing the API
+
+
++ Response 200 (application/json)
+    + Attributes (array[audio])
+
+
+## Audio By Audio Id [/audio/{audio_id}/{?thumbnailUrl,creator}]
+
++ Parameters
+    + audio_id (number, required)
+
+        unique id for the audio
+
+
+### updateAudio [PUT]
+update audio
++ Parameters
+    + appid (string, required)
+
+        your appid for accessing the API
+
+    + appkey (string, required)
+
+        your appkey for accessing the API
+
+    + name (string, required)
+
+        name of the audio
+
+    + description (string, optional)
+
+        description of the audio
+
+    + url (string, required)
+
+        url of the audio
+
+    + thumbnailUrl (string, optional)
+
+        thumbnailUrl of the audio
+
+    + creator (string, optional)
+
+        creator of the audio
+
+
++ Response 200 (application/json)
+    + Attributes (array[audio])
+
+
+## Audio By Audio Id [/audio/{audio_id}/{?appid,appkey}]
+
++ Parameters
+    + audio_id (number, required)
+
+        unique id for the audio
+
+
+### deleteAudio [DELETE]
+deletes an audio
++ Parameters
+    + appid (string, required)
+
+        your appid for accessing the API
+
+    + appkey (string, required)
+
+        your appkey for accessing the API
+
+
++ Response 200 (application/json)
+    + Attributes (array[audio])
+
+
+
+# Group Tags
+
+## Audio Tags By Audio Id [/audio/{audio_id}/tags/{?appid,appkey}]
+
++ Parameters
+    + audio_id (number, required)
+
+        id for audio
+
+
+### getaudioTags [GET]
+Returns the tags for an audio
++ Parameters
+    + appid (string, required)
+
+        your appid for accessing the audio
+
+    + appkey (string, required)
+
+        your appkey for accessing the audio
+
+
++ Response 200 (application/json)
+    + Attributes (array[tag])
+
+
+## Audio Tags By Audio Id [/audio/{audio_id}/tags/]
+
++ Parameters
+    + audio_id (number, required)
+
+        id for the audio
+
+
+### addPeopleTag [POST]
+add tag for audio
++ Parameters
+    + appid (string, required)
+
+        your appid for accessing the audio
+
+    + appkey (string, required)
+
+        your appkey for accessing the audio
+
+    + tag (string, required)
+
+        tag name
+
+
++ Response 200 (application/json)
+    + Attributes (array[tag])
+
+
+## Audio Tags By Audio Id And Tag [/audio/{audio_id}/tags/{tag}{?appid,appkey}]
+
++ Parameters
+    + audio_id (string, required)
+
+        id for the audio
+
+    + tag (string, required)
+
+        tag to remove from audio
+
+
+### deleteaudioTag [DELETE]
+deletes a tag applied to audio
++ Parameters
+    + appid (string, required)
+
+        your appid for accessing the audio
+
+    + appkey (string, required)
+
+        your appkey for accessing the audio
+
+
++ Response 200 (application/json)
+    + Attributes (array[tag])
+
+
+
+# Data Structures
+
+## audio (object)
+
+
+### Properties
++ `audio_id` (number, optional) - unique id for the audio
++ `name` (string, optional) - name of the audio
++ `description` (string, optional) - description for the audio
++ `url` (string, optional) - url for the audio contact
++ `thumbnailUrl` (string, optional) - thumbnail url for the audio contact
++ `creator` (string, optional) - creator for the audio contact
+
+
+## tag (object)
+
+
+### Properties
++ `tag_id` (number, optional) - id for the tag
++ `tag` (string, optional) - text tag
++ `api_count` (number, optional) - number of items api with tag
+

@@ -29,6 +29,10 @@
           "url": "https://kin-lane.github.io/audio/swagger.json"
         },
         {
+          "type": "Blueprint",
+          "url": "https://kin-lane.github.io/audio/audio.apib"
+        },
+        {
           "type": "x-postman",
           "url": "https://kin-lane.github.io/audio/postman.json"
         },

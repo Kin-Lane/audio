@@ -1,20 +1,20 @@
 [{
-	"name": "APIs",
-	"description": "This is my API for working with the APIs I track on. I use this API to add, update, and delete the APIs, their details, an I am working to create as many API focused endpoints, which let me manage even more APIs, whether they are mine or other publicly available APIs I am interested in.",
-	"image": "https://s3.amazonaws.com/kinlane-productions/api-commons/api-commons-icon.png",
+	"name": "Audio API",
+	"description": "This is my audio API for storing the audio files I create, bookmark, and curate from around the web. This APIs has a lot of work ahead of it, but I want to use it for mostly my personal audio, but eventually I intend on a wealth of audio focused on APIs, as well as other topics i tune into like encryption, regulation, and more.",
+	"image": "https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-audio.png",
 	"x-open-ranking": "0",
-	"tags": ["Kin Lane API API"],
-	"created": "2016-04-02",
-	"modified": "2016-04-02",
-	"url": "http://kin-lane.github.io/api/"
+	"tags": ["Kin Lane Audio API"],
+	"created": "2016-04-03",
+	"modified": "2016-04-03",
+	"url": "https://kin-lane.github.io/audio/"
 	"specificationVersion": "0.14",
 	"apis": [{
-		"name": "Kin Lane API",
-		"description": "<p><span>This is my API for working with the APIs I track on. I use this API to add, update, and delete the APIs, their details, an I am working to create as many API focused endpoints, which let me manage even more APIs, whether they are mine or other publicly available APis I am interested in.</span></p>",
+		"name": "Kin Lane Audio",
+		"description": "<p>This is my audio API for storing the audio files I create, bookmark, and curate from around the web. This APIs has a lot of work ahead of it, but I want to use it for mostly my personal audio, but eventually I intend on a wealth of audio focused on APIs, as well as other topics i tune into like encryption, regulation, and more.</p>",
 		"image": "http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/kin.png",
-		"humanURL": "http://kin-lane.github.io/api/",
-		"baseURL": "/",
-		"tags": ["Kin Lane API API"],
+		"humanURL": "https://kin-lane.github.io/audio/",
+		"baseURL": "https://kin-lane.github.io/audio/",
+		"tags": ["Kin Lane Audio API"],
 		"properties": [{
 			"type": "x-openapi-spec",
 			"url": "api-commons/openapi-spec.json"
@@ -110,7 +110,7 @@
 	}],
 	"include": [{
 		"name": "Parent",
-		"url": "http://kin-lane.github.io/api//apis.yaml"
+		"url": "https://kin-lane.github.io/audio//apis.yaml"
 	}],
 	"maintainers": [{
 		"FN": "Kin Lane",

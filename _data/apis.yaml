@@ -1,21 +1,27 @@
-- name: Audio API
-  description: ""
-  image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-audio.png
+- name: APIs
+  description: This is my API for working with the APIs I track on. I use this API
+    to add, update, and delete the APIs, their details, an I am working to create
+    as many API focused endpoints, which let me manage even more APIs, whether they
+    are mine or other publicly available APIs I am interested in.
+  image: https://s3.amazonaws.com/kinlane-productions/api-commons/api-commons-icon.png
   x-open-ranking: "0"
   tags:
-  - Kin Lane Audio API
-  created: "2016-04-03"
-  modified: "2016-04-03"
+  - Kin Lane API API
+  created: "2016-04-02"
+  modified: "2016-04-02"
   url: ""
   specificationVersion: "0.14"
   apis:
-  - name: Kin Lane Audio
-    description: This is my master org.
+  - name: Kin Lane API
+    description: <p><span>This is my API for working with the APIs I track on. I use
+      this API to add, update, and delete the APIs, their details, an I am working
+      to create as many API focused endpoints, which let me manage even more APIs,
+      whether they are mine or other publicly available APis I am interested in.</span></p>
     image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/kin.png
-    humanURL: https://kin-lane.github.io/audio/
-    baseURL: https://kin-lane.github.io/audio/
+    humanURL: /
+    baseURL: /
     tags:
-    - Kin Lane Audio API
+    - Kin Lane API API
     properties:
     - type: x-openapi-spec
       url: api-commons/openapi-spec.json
@@ -66,7 +72,7 @@
     url: api-commons/api-plan.json
   include:
   - name: Parent
-    url: https://kin-lane.github.io/audio//apis.yaml
+    url: http://kin-lane.github.io/api//apis.yaml
   maintainers:
   - FN: Kin Lane
     x-twitter: apievangelist

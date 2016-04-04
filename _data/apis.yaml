@@ -1,5 +1,9 @@
 - name: Audio API
-  description: ""
+  description: This is my audio API for storing the audio files I create, bookmark,
+    and curate from around the web. This APIs has a lot of work ahead of it, but I
+    want to use it for mostly my personal audio, but eventually I intend on a wealth
+    of audio focused on APIs, as well as other topics i tune into like encryption,
+    regulation, and more.
   image: https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-audio.png
   x-open-ranking: "0"
   tags:
@@ -10,7 +14,11 @@
   specificationVersion: "0.14"
   apis:
   - name: Kin Lane Audio
-    description: This is my master org.
+    description: <p>This is my audio API for storing the audio files I create, bookmark,
+      and curate from around the web. This APIs has a lot of work ahead of it, but
+      I want to use it for mostly my personal audio, but eventually I intend on a
+      wealth of audio focused on APIs, as well as other topics i tune into like encryption,
+      regulation, and more.</p>
     image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/kin.png
     humanURL: https://kin-lane.github.io/audio/
     baseURL: https://kin-lane.github.io/audio/
